@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2013-03 March", "2013-03 March", "{AF0024DC-1391-4B36-9B3A-366CFBE8AC39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2013.March.Data", "2013.March.Data\2013.March.Data.csproj", "{8A2700ED-DAD7-42E1-B4FA-2B873A8EA87C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2013.March.Tests", "2013.March.Tests\2013.March.Tests.csproj", "{174ECAC1-D805-4F7D-9947-8FEDE6D5797C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2013.March.Domain", "2013.March.Domain\2013.March.Domain.csproj", "{DE0AA68F-D0A4-44E4-9B11-1D75A78B40E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2013.March.RunMe", "2013.March.RunMe\2013.March.RunMe.csproj", "{144E041C-4417-4E85-BC42-47F794FA89C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EF Code First", "EF Code First", "{7248CFEA-804B-4B97-BF8D-9DCF1EE36E5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicrosoftFakes_Statics", "MicrosoftFakes_Statics", "{F7C8EBEC-E9D1-405F-A15F-81DABED52111}"
+	ProjectSection(SolutionItems) = preProject
+		2013.March.Data\LogicLayer.cs = 2013.March.Data\LogicLayer.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2013-04 April", "2013-04 April", "{4FF1017B-B167-4284-A3A8-A64E2D474319}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A2700ED-DAD7-42E1-B4FA-2B873A8EA87C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A2700ED-DAD7-42E1-B4FA-2B873A8EA87C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A2700ED-DAD7-42E1-B4FA-2B873A8EA87C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A2700ED-DAD7-42E1-B4FA-2B873A8EA87C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{174ECAC1-D805-4F7D-9947-8FEDE6D5797C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{174ECAC1-D805-4F7D-9947-8FEDE6D5797C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{174ECAC1-D805-4F7D-9947-8FEDE6D5797C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{174ECAC1-D805-4F7D-9947-8FEDE6D5797C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE0AA68F-D0A4-44E4-9B11-1D75A78B40E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE0AA68F-D0A4-44E4-9B11-1D75A78B40E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE0AA68F-D0A4-44E4-9B11-1D75A78B40E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE0AA68F-D0A4-44E4-9B11-1D75A78B40E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{144E041C-4417-4E85-BC42-47F794FA89C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{144E041C-4417-4E85-BC42-47F794FA89C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{144E041C-4417-4E85-BC42-47F794FA89C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{144E041C-4417-4E85-BC42-47F794FA89C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7248CFEA-804B-4B97-BF8D-9DCF1EE36E5D} = {AF0024DC-1391-4B36-9B3A-366CFBE8AC39}
+		{F7C8EBEC-E9D1-405F-A15F-81DABED52111} = {AF0024DC-1391-4B36-9B3A-366CFBE8AC39}
+		{DE0AA68F-D0A4-44E4-9B11-1D75A78B40E8} = {7248CFEA-804B-4B97-BF8D-9DCF1EE36E5D}
+		{144E041C-4417-4E85-BC42-47F794FA89C0} = {7248CFEA-804B-4B97-BF8D-9DCF1EE36E5D}
+		{8A2700ED-DAD7-42E1-B4FA-2B873A8EA87C} = {7248CFEA-804B-4B97-BF8D-9DCF1EE36E5D}
+		{174ECAC1-D805-4F7D-9947-8FEDE6D5797C} = {F7C8EBEC-E9D1-405F-A15F-81DABED52111}
+	EndGlobalSection
+EndGlobal
