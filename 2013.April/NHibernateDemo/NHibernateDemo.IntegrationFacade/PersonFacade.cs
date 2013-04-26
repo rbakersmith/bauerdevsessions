@@ -32,22 +32,17 @@ namespace NHibernateDemo.IntegrationFacade
             {
                 using (var transaction = session.BeginTransaction())
                 {
-                    var personToSave = new Person() { Name = person.Name, UpdatedBy = person.UpdatedBy, CreatedBy = person.CreatedBy };
-                    var existing = session.Query<Person>().Where(x => x.Name == person.Name).FirstOrDefault();
-                    if (existing == null)
+                    var existing = _personRepository.FetchPerson(person.Name, session);
+                    var personToSave = existing == null ? new Person() { Name = person.Name, UpdatedBy = person.UpdatedBy, CreatedBy = person.CreatedBy } : existing;                    
+                    
+                    foreach (var item in person.Communications)
                     {
-                        session.Save(personToSave);
-                        foreach (var item in person.Communications)
-                        {
-                            item.CommunicationType = session.Query<CommunicationType>().Where(x => x.Value == item.CommunicationType.Value).First();
-                            personToSave.Communications.Add(item);
-                        }
-                        session.SaveOrUpdate(personToSave);
-                        transaction.Commit();
-                        return personToSave;
+                        item.CommunicationType = session.Query<CommunicationType>().Where(x => x.Value == item.CommunicationType.Value).First();
+                        personToSave.Communications.Add(item);
                     }
-                    existing.Communications.ToList();
-                    return existing;                    
+                    _personRepository.Save(personToSave, session);                    
+                    transaction.Commit();
+                    return personToSave;
                 }
             }
         }

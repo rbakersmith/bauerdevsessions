@@ -53,7 +53,14 @@ namespace NHibernateDemo.Test
                 Detail = "simon@here.com",
                 CreatedBy = _user,
                 UpdatedBy = _user
-            });
+            });/*
+            person.Communications.Add(new Communication()
+            {
+                CommunicationType = new CommunicationType() { Value = "Phone" },
+                Detail = "0299990000",
+                CreatedBy = _user,
+                UpdatedBy = _user
+            });*/
 
             //act
             person = facade.SavePerson(person);

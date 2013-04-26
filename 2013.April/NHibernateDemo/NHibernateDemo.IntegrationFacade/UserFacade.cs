@@ -32,7 +32,7 @@ namespace NHibernateDemo.IntegrationFacade
                 {
                     return existing;
                 }
-                _userRepository.Insert(user, session);
+                _userRepository.Save(user, session);
                 return _userRepository.FetchUser(user.UserName, session);
             }
         }
