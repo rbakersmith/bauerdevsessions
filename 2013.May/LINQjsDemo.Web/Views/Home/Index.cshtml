@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts
+{
+@Scripts.Render("~/bundles/linqjs")
+<script type="text/javascript" src="/Scripts/Demo/BasicArray.js"></script>
+<script type="text/javascript" src="/Scripts/Demo/WeatherDemo.js"></script>
+<script type="text/javascript" src="/Scripts/Demo/CitiesDemo.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        CitiesDemo.FetchCityData();
+        WeatherDemo.FetchWeather();
+        $("#States").change(function (data) { CitiesDemo.BuildCitiesGrid(); });
+    });
+</script>
+}
+<h2>Working with LINQjs Enumerables</h2>
+
+<h3>Working with basic arrays</h3>
+<p>
+    Arrays can be converted to Enumerables and queried
+    <ul>
+        <li><a href="javascript:void(0)" onclick="BasicArray.OddNumbers()">Show me odd numbers using function(x)</a>
+        <li><a href="javascript:void(0)" onclick="BasicArray.OddNumbersLambda()">Show me odd numbers using lambda shortcut</a>
+        <li><a href="javascript:void(0)" onclick="BasicArray.Backwards()">Reverse the array</a></li>
+    </ul>
+</p>
+
+<h3>Ranges</h3>
+<p>
+    Ranges of numbers can be dynamically generated
+    <ul>
+        <li><a href="javascript:void(0)" onclick="BasicArray.EvenNumbersRange()">Show me the even numbers in a range of 1-10
+        <li><a href="javascript:void(0)" onclick="BasicArray.Union()">Create a union with a range between 10-20</a>
+    </ul>
+</p>
+
+
+<h3>Average, min & max</h3>
+<p>Using weather info for Sydney from the Yahoo! Weather API...</p>
+<button onclick="WeatherDemo.GetStats()">Get data</button><span id="weatherStats"></span>
+
+<h3>Enumerables to jQuery arrays</h3>
+
+<p>Using <code>linq.jquery.js</code>, Enumerables from LINQjs can create jQuery elements and convert to jQuery arrays</p>
+<label for="States">State:</label><select id="States"><option>Select a state...</option></select>
+<table id="CitiesGrid" style="border: 1px solid black;">
+    <thead>
+        <tr>
+            <th>City</th>
+            <th>Population</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
