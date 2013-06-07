@@ -200,6 +200,7 @@
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\Demo\BasicArray.js" />
     <Content Include="Scripts\Demo\CitiesDemo.js" />
+    <Content Include="Scripts\Demo\TeamsDemo.js" />
     <Content Include="Scripts\Demo\WeatherDemo.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
